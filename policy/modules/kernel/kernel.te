@@ -449,3 +449,9 @@ allow kern_unconfined unlabeled_t:filesystem *;
 allow kern_unconfined unlabeled_t:association *;
 allow kern_unconfined unlabeled_t:packet *;
 allow kern_unconfined unlabeled_t:process ~{ transition dyntransition execmem execstack execheap };
+
+mcs_killall(kernel_t)
+mcs_file_read_all(kernel_t)
+mcs_file_write_all(kernel_t)
+mcs_process_set_categories(kernel_t)
+mcs_ptrace_all(kernel_t)
