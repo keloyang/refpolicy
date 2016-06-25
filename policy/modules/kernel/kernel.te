@@ -457,3 +457,4 @@ mcs_process_set_categories(kernel_t)
 mcs_ptrace_all(kernel_t)
 
 allow kernel_t unconfined_t:process { transition dyntransition };
+allow svirt_lxc_net_t kernel_t:fifo_file write;
